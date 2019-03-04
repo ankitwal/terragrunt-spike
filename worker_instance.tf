@@ -24,13 +24,19 @@ resource "aws_security_group" "worker_sg" {
     self            = true
     security_groups = ["${aws_security_group.workstation_sg.id}"]
   }
+  egress {
+  from_port   = 0
+  to_port     = 0
+  protocol    = "-1"
+  cidr_blocks = ["0.0.0.0/0"]
+}
 }
 
 resource "aws_launch_configuration" "worker_launch_config" {
   name            = "${var.project} worker tempalte"
   image_id        = "${var.worker_ami}"
   instance_type   = "t3.medium"
-  vpc_security_group_ids = ["${aws_security_group.worker_sg.id}"]
+  security_groups = ["${aws_security_group.worker_sg.id}"]
   key_name        = "${aws_key_pair.worker-keypair.key_name}"
 
 }
