@@ -3,6 +3,7 @@ terraform {
     region = "ap-southeast-1"
     bucket = "lf258-tf-state"
     key    = "tf-state/"
+
   }
 }
 
