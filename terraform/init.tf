@@ -3,23 +3,23 @@ terraform {
     region = "ap-southeast-1"
     bucket = "lf258-tf-state"
     key    = "tf-state/"
-
   }
 }
 
 provider "aws" {
-  region = "ap-southeast-1"
+  region  = "ap-southeast-1"
+  version = "2.8"
 }
 
 variable "region_numbers" {
-  type = "map"
+  type = map(string)
   default = {
     ap-southeast-1 = 1
   }
 }
 
 variable "az_numbers" {
-  type = "map"
+  type = map(string)
   default = {
     a = 1
     b = 2

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source env.sh
+
 
 if ! aws s3api head-bucket --bucket "$S3_BUCKET" 2>/dev/null ; then
   echo "Bucket ${S3_BUCKET} is not exited"
@@ -11,5 +11,5 @@ if ! aws s3api head-bucket --bucket "$S3_BUCKET" 2>/dev/null ; then
   echo "Bucket ${S3_BUCKET} is created"
 fi
 
-terraform init
+
 
