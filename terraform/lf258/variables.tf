@@ -4,7 +4,7 @@ variable "vpc_index" {
 }
 
 variable "project" {
-  default = "lf258"
+  #default = "lf258"
 }
 
 variable "availability_zone" {

@@ -1,7 +1,11 @@
 terraform {
   source = ""
 }
+include {
+  path = find_in_parent_folders()
+}
 inputs = {
+  project = "terragrunt-spike"
   availability_zone = "ap-southeast-1c"
   workstation_ami = "ami-05b3bcf7f311194b3"
   workstation_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0uRz3DC7gv6XUT5gP0QYUGxKnd3lGIKq4oey0JH/NWDISuESkc3DnwiElJ0AoUNMMPg4phG8kvWiV3n7djvLNiQwJr18XWcrJAFUXc4ELzz+NJPBmeBpNcZHLgL1/4Xk39VZ/T2ZhC6aZadsEnnp8iTU4zOrReVarwDF2glEzfbeq5js1aOVF7tpoiQNlNPHF0f0qpyFG5Dp0U9bGAqZVUbOZZJ1eARl1VTq0ZQRrCW6K5rS9cQbNvyh0Xg04mWrvXaXdXpFm53yF9ZHso/zX+rmXWiWJC5aWrfmeNOxKqQbcCvK5edpyGyKvUkChVUeXYCTdCA8SEWG6xRLgFmXf sgankitwal@SGankitwal.local"
