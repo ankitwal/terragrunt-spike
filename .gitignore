@@ -3,3 +3,15 @@ keys
 
 # IntelliJ
 .idea
+
+# Terragrunt, from : https://github.com/gruntwork-io/terragrunt/blob/master/.gitignore 
+.*.sw?
+.idea
+terragrunt.iml
+vendor
+.terraform
+.vscode
+*.tfstate
+*.tfstate.backup
+*.out
+.terragrunt-cache

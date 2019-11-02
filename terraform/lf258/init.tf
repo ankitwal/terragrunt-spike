@@ -1,8 +1,6 @@
 terraform {
+  # This config will be injected by terragrunt
   backend "s3" {
-    region = "ap-southeast-1"
-    bucket = "lf258-tf-state"
-    key    = "tf-state/"
   }
 }
 
