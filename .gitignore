@@ -1,5 +1,7 @@
+# Keys
 keys
-.terraform
+lf258-workstation*
+lf258-worker*
 
 # IntelliJ
 .idea
