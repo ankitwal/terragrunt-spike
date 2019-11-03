@@ -38,3 +38,8 @@ specific conventions rather than hidden clever configuration?
 - Directory structure magic hard to understand
 - What does it mean for pipeline orchestration 
 
+#### Notes:  
+
+- refering to files in modules/tf code. because terragrunt makes a cahced copy of your tf files(module) it forces you to have your modules self contained. 
+if you refer to a file eg. user_data = file('path to file'). the Path to file has to be inside your module directory, other wise the relative path will break when terragrunt copies
+your module into '.terragrunt.hcl'. This is good, as it prevents you from inadvertently coupling tf module to external dependencies.  
