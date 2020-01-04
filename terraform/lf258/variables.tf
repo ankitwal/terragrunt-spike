@@ -32,5 +32,4 @@ variable "workers_count" {
 
 variable "workstation_ip_whitelist" {
   type = list(string)
-  default = []
 }
